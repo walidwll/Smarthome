@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home | Domotica</title>
+    <!-- Import Styling -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
+    <link href="assets/css/app.css" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <div class="brand">
+                <i class="icon" data-feather="home"></i>
+                <h1>Smart Home</h1>
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav__item">
+                        <a href="login.html" id="logOutBtn">Sign Out</a>
+                        <i class="icon" data-feather="log-out"></i>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="grid dashboard">
+            <div class="grid__item">
+                <h1 class="dashboard__title"><span class="greeting"></span></h1>
+                <section class="dashboard__sensors">
+                    <div class="dashboard__sensor-item">
+                        <span>Temp.</span>
+                        <h2>
+                            <i class="icon" data-feather="thermometer"></i>
+                            <span id="temperature"></span>
+                        </h2>
+                    </div>
+                    <div class="dashboard__sensor-item">
+                        <span>Humid.</span>
+                        <h2>
+                            <i class="icon" data-feather="droplet"></i>
+                            <span id="humidity"></span>
+                        </h2>
+                    </div>
+                </section>
+            </div>
+            <div class="grid__item">
+                <section class="dashboard__devices">
+                        <div class="device-card" data-device="lights" id="lightsToggle">
+                            <i class="icon" data-feather="clock"></i>
+                            <h3 class="device-card__title">Lighting</h3>
+                            <span class="device-card__status">Off</span>
+                        </div>
+                        <div class="device-card" data-device="outlets" id="outletsToggle">
+                            <i class="icon" data-feather="battery"></i>
+                            <h3 class="device-card__title">Outlets</h3>
+                            <span class="device-card__status">Off</span>
+                        </div>
+                        <div class="device-card" data-device="front-door" id="front-doorToggle">
+                            <i class="icon" data-feather="smartphone"></i>
+                            <h3 class="device-card__title">Front Door</h3>
+                            <span class="device-card__status">Off</span>
+                        </div>
+                        <div class="device-card" data-device="back-door" id="back-doorToggle">
+                            <i class="icon" data-feather="smartphone"></i>
+                            <h3 class="device-card__title">Back Door</h3>
+                            <span class="device-card__status">Off</span>
+                        </div>
+                </section>
+                <section class="button-group">
+                    <a href="#" class="btn btn--danger" id="alarmBtn">ALARM</a>
+                </section>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+<!-- Import Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+<!-- Import JS files --> 
+<script src="/shome/assets/js/utils.js"></script>
+<script src="/shome/assets/js/app.js"></script>
+</html>
